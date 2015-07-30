@@ -20,3 +20,45 @@ lucy_count <- lucy_census %>%
 #Write count csv
 write.csv(lucy_count, "lucy_count.csv")
 
+#Filter Lucy by location
+lucy_hh <- lucy %>%
+  select(id, Primary.Source, Purpose.of.Event, Subpurpose.of.Event, Year, Standardized.Spelling.Location, Spelling.First.Name.as.found.in.document, Birth.Year, Age.at.Event, Physical.Description, Skill.1, Owner, Mother) %>%
+  filter(Standardized.Spelling.Location == "Mansion House")
+
+write.csv(lucy_hh, "lucy_hh.csv")
+
+lucy_rf <- lucy %>%
+  select(id, Primary.Source, Purpose.of.Event, Subpurpose.of.Event, Year, Standardized.Spelling.Location, Spelling.First.Name.as.found.in.document, Birth.Year, Age.at.Event, Physical.Description, Skill.1, Owner, Mother) %>%
+  filter(Standardized.Spelling.Location == "River Farm")
+
+write.csv(lucy_rf, "lucy_rf.csv")
+
+lucy_dr <- lucy %>%
+  select(id, Primary.Source, Purpose.of.Event, Subpurpose.of.Event, Year, Standardized.Spelling.Location, Spelling.First.Name.as.found.in.document, Birth.Year, Age.at.Event, Physical.Description, Skill.1, Owner, Mother) %>%
+  filter(Standardized.Spelling.Location == "Dogue Run")
+
+write.csv(lucy_dr, "lucy_dr.csv")
+
+lucy_mh <- lucy %>%
+  select(id, Primary.Source, Purpose.of.Event, Subpurpose.of.Event, Year, Standardized.Spelling.Location, Spelling.First.Name.as.found.in.document, Birth.Year, Age.at.Event, Physical.Description, Skill.1, Owner, Mother) %>%
+  filter(Standardized.Spelling.Location == "Muddy Hole")
+
+write.csv(lucy_mh, "lucy_mh.csv")
+
+lucy_fy <- lucy %>%
+  select(id, Primary.Source, Purpose.of.Event, Subpurpose.of.Event, Year, Standardized.Spelling.Location, Spelling.First.Name.as.found.in.document, Birth.Year, Age.at.Event, Physical.Description, Skill.1, Owner, Mother) %>%
+  filter(Standardized.Spelling.Location == "Ferry Plantation")
+
+write.csv(lucy_fy, "lucy_fy.csv")
+
+lucy_fr <- lucy %>%
+  select(id, Primary.Source, Purpose.of.Event, Subpurpose.of.Event, Year, Standardized.Spelling.Location, Spelling.First.Name.as.found.in.document, Birth.Year, Age.at.Event, Physical.Description, Skill.1, Owner, Mother) %>%
+  filter(Standardized.Spelling.Location == "French's Plantation")
+
+write.csv(lucy_fr, "lucy_fr.csv")
+
+lucy_uf <- lucy %>%
+  select(id, Primary.Source, Purpose.of.Event, Subpurpose.of.Event, Year, Standardized.Spelling.Location, Spelling.First.Name.as.found.in.document, Birth.Year, Age.at.Event, Physical.Description, Skill.1, Owner, Mother) %>%
+  filter(Standardized.Spelling.Location == "Union Farm")
+
+write.csv(lucy_uf, "lucy_uf.csv")
